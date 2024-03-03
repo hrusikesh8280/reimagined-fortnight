@@ -29,11 +29,12 @@ import {
 } from "./pages/categories";
 import { HomeIcon, ShoppingCartIcon, TagIcon } from "@heroicons/react/20/solid";
 import { Dashboard } from "./pages/dashboard_Figma";
-
+import './App.css'
 function App() {
   return (
     <BrowserRouter>
       <RefineKbarProvider>
+      <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         <Refine
           dataProvider={dataProvider("https://api.finefoods.refine.dev")}
           routerProvider={routerBindings}
@@ -104,6 +105,7 @@ function App() {
           <UnsavedChangesNotifier />
           <DocumentTitleHandler />
         </Refine>
+        </div>
       </RefineKbarProvider>
     </BrowserRouter>
   );
